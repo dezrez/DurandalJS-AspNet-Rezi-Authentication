@@ -1,0 +1,10 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="main-page">
+    <section id="global-nav" data-bind="compose: { model: globalNavigation, view: '../../Views/GlobalNavigation'}" class="new-row"></section>
+    <div id="main-page-mask" class="full-page-mask hidden"></div>
+
+    <section id="content" data-bind="router: {cacheViews: false }"></section>
+</div>

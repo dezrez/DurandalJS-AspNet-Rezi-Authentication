@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "text.css",
+  "sources": [
+    "text.less"
+  ],
+  "names": [],
+  "mappings": "AAEA;EACI,cAAA;;AAGJ;EACI,cAAA;;AAGJ;EACI,cAAA"
+}

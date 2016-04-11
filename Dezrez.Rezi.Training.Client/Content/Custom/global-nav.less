@@ -1,0 +1,161 @@
+﻿@import "../Custom/variables.less";
+@import "../Custom/mixins.less";
+
+
+.navbar {
+    border: none;
+
+    &.global-nav-bottom {
+        a {
+            color: @text-colour-for-dark;
+
+            &:focus, &.selected, &:hover {
+                text-decoration: none;
+                background-color: @neutral-dark;
+            }
+        }
+
+        .navbar-right {
+            li {
+                a:hover {
+                    background-color: none;
+                }
+            }
+        }
+
+        .navbar-left {
+            li {
+                width: 100px;
+                text-align: center;
+
+                &.selected {
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        top: 20px;
+                        left: 40px;
+                        width: 20px;
+                        height: 20px;
+                        background-color: @neutral-dark;
+                        .rotate(45deg);
+                    }
+                }
+            }
+
+                li.global-nav-icon-large {
+                    width: 76px;
+
+                    a i {
+                        margin: 0 auto;
+                    }
+
+                    &.selected {
+                        &:before {
+                            left: 28px;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+.global-nav {
+    font-family: @global-font;
+    margin-bottom: 0;
+    border-radius: 0;
+
+    .divider-right {
+        border-right: 1px solid @divider-colour;
+    }
+
+    .divider-left {
+        border-left: 1px solid @divider-colour;
+    }
+
+    nav {
+        border-radius: 0;
+    }
+
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+    }
+}
+
+.global-nav-container {
+    width: 100%;
+    top: 0;
+    min-width: @container-minimum-width;
+    left: 0;
+}
+
+    .global-nav-container .navbar {
+        padding-right: 15px;
+        height: 36px;
+        min-height:36px;
+        margin-bottom: 0;
+    }
+
+    .global-nav-container.with-user-panel {
+        left: 0;
+        right: 400px;
+        width: auto;
+    }
+
+.nav > li > a {
+    padding: 8px 14px 8px 14px;
+}
+
+.global-nav-icon {
+    font-size: 18px;
+
+    a {
+        padding: 8px 10px 6px 10px;
+    }
+}
+
+.nav > li.global-nav-icon-large {
+    a {
+        padding: 4px 8px 4px 8px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+li.global-nav-user-icon-container {
+    padding: 4px 4px 0px;
+
+    a {
+        padding: 0;
+    }
+}
+
+.global-nav-bottom {
+    background-color: @neutral-dark;
+}
+
+.global-nav-top {
+    background-color: @neutral-v-dark;
+}
+
+
+.user-avatar {
+    width: 24px;
+    height: 24px;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0 0 0;
+    float: right;
+}
+
+.user-avatar-medium {
+    width: 45px;
+    height: 45px;
+}

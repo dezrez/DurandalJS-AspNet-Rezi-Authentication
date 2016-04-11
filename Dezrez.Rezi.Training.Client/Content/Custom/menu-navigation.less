@@ -1,0 +1,83 @@
+﻿@import "mixins.less";
+@import "variables.less";
+
+.menu-navigation {
+
+    &.left {
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                .transition(0.2s);
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                border-bottom: solid 1px;
+                border-color: darken(@primary-colour,4%);
+                padding: 15px 0px;
+                height: 50px;
+                background-color: @secondary-colour;
+                width: 270px;
+                cursor: pointer;
+                font-weight: normal;
+
+                span {
+                    vertical-align: top;
+                    margin-top: 1px;
+                    display: inline-block;
+                }
+
+                i {
+                    .transition();
+                }
+
+                &:hover {
+                    background-color: darken(@secondary-colour,4%);
+
+                    ul {
+                        .transition();
+                        display: inline;
+                    }
+
+                    i.char-arrow-left2 {
+                        -webkit-transform: translateX(-4px);
+                        -moz-transform: translateX(-4px);
+                        -o-transform: translateX(-4px);
+                        -ms-transform: translateX(-4px);
+                        transform: translateX(-4px);
+                    }
+                }
+
+                &.menu-extends {
+                    &:before {
+                        content: "\e3b7";
+                        font-family: Rezi;
+                        vertical-align: bottom;
+                    }
+                }
+
+                .menu-item-icon {
+                    position: relative;
+                    right: -220px;
+                }
+            }
+
+            ul {
+                display: none;
+
+                li {
+                    position: relative;
+                    left: -270px;
+                    top: -36px;
+                    background-color: lighten(@secondary-colour, 10%);
+                    color: @white;
+
+                    &:hover {
+                        background-color: lighten(@secondary-colour, 5%);
+                    }
+                }
+            }
+        }
+    }
+}

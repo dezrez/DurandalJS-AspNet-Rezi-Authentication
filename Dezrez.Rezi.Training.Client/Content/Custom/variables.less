@@ -1,0 +1,281 @@
+﻿@global-bg: #F6F6F6;
+@global-font: "OpenSans";
+@active-panel-bg:#FFFFFF;
+
+//
+// Responsive breakpoints
+// --------------------------------------------------
+
+@content-width-max: 1160px;
+
+@content-break-med: 1159px;
+@content-width-med: 980px;
+
+@content-break-min: 979px;
+@content-width-min: 728px;
+
+//
+// Fixed widths
+// --------------------------------------------------
+@width-unit: 35px;
+
+//
+// Applicant Facing 
+// --------------------------------------------------
+.applicant-facing-shadow() {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+@applicant-facing-ribbon-background: #000000;
+@applicant-facing-map-thumb-background: #656766;
+@applicant-facing-loading-background: #888888;
+
+//
+// Custom variables
+// -------------------------------------------------- 
+
+// Common colours
+
+@action-color: #B5B5B5;
+@active-tab-background:@light-grey;
+@amber : #EFAC4D;
+@bg-med: #BFBFBF;
+@black : #000000;
+@border-selected: white;
+@border-unselected: black;
+@checkbox-border: #D1D1D1;
+@dark-blue: #0F3976;
+@btn-primary: #0F3976;
+@btn-secondary: #DBDBDB;
+@darkgrey-colour: @neutral-v-dark;
+@darkgrey-selected-colour: #252525;
+@dark-grey-text:#666666;
+@dark-orange:#DA2C01;
+@divider-colour: #aeaeae;
+@divider-colour-light-bottom: @neutral-light;
+@divider-colour-light-top: @light-grey;
+@drop-area-border:#D8D8D8;
+@drop-area-background:#F6F6F6;
+@feature-colour: #e0e0e0;
+@feature-colour-alt: #c6c6c6;
+@green : #5CB85C;
+@hover-color: #f6f6f6;
+@icon-background:#C9C9C9;
+@image-border:#dddddd;
+@icon-quote: #666666;
+@inactive-tab-background:@white;
+@info-colour: #314F8E;
+@info-colour-action: #05316D;
+@info-colour-alt: #0F3976;
+@input-box-border:#dddddd;
+@invert-text-color: @white;
+@invert-text-color-hover: @neutral-light;
+@lighest-grey:#F7F7F7;
+@light-blue:#314F8E;
+@lighter-blue:#49689F;
+@lightest-blue: #E0F8F7;
+@light-grey:#eeeeee;
+@light-orange:#EB8265;
+@loading-background: #888888;
+@modal-background-color: @white;
+@neutral-background-color: #FCFCFC;
+@neutral-dark:#333333;
+@neutral-light:#cccccc;
+@neutral-medium:#777777;
+@neutral-v-dark:#666666;
+@neutral-v-light:@light-grey;
+@new-item-notification: #55ee55;
+@notification-color: #aaaaaa;
+@orange:#FE4C04;
+@pastel-blue : #B9DCEF;
+@pastel-green : #C3E2B8;
+@pastel-red : #E7C0C1;
+@pastel-yellow: #F9F1CA;
+@pending-color: #EFAD50;
+@plain-tabs-background: @white;
+@primary-colour: #FE4C04;
+@purple : #7F6C9C;
+@red : #B52C27;
+@secondary-action-icon-colour: #DBDBDB;
+@secondary-colour: #DA2C01;
+@table-background-color: @white;
+@table-border-color:#DADADA; 
+@table-header-background-color:#F4F4F4;
+@text-color: @neutral-dark; 
+@text-color-hover: #979797;
+@text-color-main: #FC4C04;
+@text-colour-for-dark: @white;
+@text-colour-for-dark-hover: #bbbbbb;
+@text-colour-for-light: @neutral-dark;
+@text-heading-color: @neutral-dark; 
+@text-highlight-background-colour: #408fd1;
+@text-highlight-colour: @white;
+@tile-info-icon-color: #49689F;
+@transparent-background:rgba(0,0,0,0);
+@very-light-grey:#DADADA;
+@warning-color: @red;
+@white: #ffffff;
+@textinput-focus-border:#66AFE9;
+@link: #3399FF;
+//
+// Other variables
+//
+
+@container-minimum-width: 737px;
+@padding-small: 20px;
+@padding-xsmall: 10px;
+@margin-small: 20px;
+@margin-xsmall: 10px;
+@large-text: 1.4em;
+@small-text: 0.8em;
+@normal-text: 1em;
+@tag-border-radius: 5px;
+@transparency-v-low: 0.80;
+@transparency-low: 0.75;
+@transparency-medium: 0.5;
+@transparency-high: 0.25;
+
+@user-online-colour:@green;
+@user-offline-colour:@red;
+@user-idle-colour:orange;
+@user-group-color:gray;
+
+
+
+//
+// Functions
+// --------------------------------------------------
+
+.action-icon() {
+    .char {
+        font-size: 16px;
+        color: @marketing-hub-overview-action-icon-color;
+    }
+
+    .inner {
+        padding: 5px;
+        background-color: @marketing-hub-overview-action-icon-bg-color;
+        display: inline-block;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    margin-top: 5px;
+    text-align: right;
+}
+
+.cover-image()
+{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.transparent-dark-back() {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+//
+// Global Navigation
+// --------------------------------------------------
+
+@global-nav-height: 72px;
+
+//
+//Mapping
+// --------------------------------------------------
+
+@map-text:#111111;
+@map-control-back-color:#fcfcfc;
+@map-border-color:#d5d5d5;
+
+//
+// Marketing hub
+// --------------------------------------------------
+
+@marketing-hub-tabs-back-colour: #eeeeee; 
+@marketing-hub-tabs-divider-colour: #cccccc;
+@marketing-hub-tabs-colour-active: #333333;
+@marketing-hub-tabs-colour-active-back: #ffffff;
+@marketing-hub-tabs-colour-inactive: #666666;
+@marketing-hub-tabs-colour-inactive-back: #eeeeee;
+@marketing-hub-overview-room-tile-bg-color:#eee;
+@marketing-hub-overview-room-tile-alt-bg-color:#ddd;
+@marketing-hub-overview-features-list-back: #f9f9f9;
+@marketing-hub-overview-tile-back: #f9f9f9;
+@marketing-hub-overview-tile-border: 1px solid #CCCCCC;
+@marketing-hub-overview-tile-color: #333333;
+@marketing-hub-overview-tile-icon-color: #AAAAAA;
+//@marketing-hub-overview-exclamation: #fe4d01;
+@marketing-hub-overview-action-icon-bg-color: #CCCCCC;
+@marketing-hub-overview-action-icon-color: #333333;
+@marketing-hub-overview-link-color:#3399FF;
+//Navigation
+@global-nav-height: 72px;
+
+//
+// Override Bootstrap variables
+// --------------------------------------------------
+
+@icon-font-path: "Bootstrap/fonts/";
+//Override the bootstrap variable to prevent nav stacking at all breakpoints
+@grid-float-breakpoint: 1px;
+
+//
+// Tables
+// --------------------------------------------------
+@selected-table-row-color: @neutral-v-light;
+@table-data-highlight-color: #3399FF;
+
+//
+// Tabs
+// --------------------------------------------------
+
+@tabs-tab-background-colour: #F8F8F8;
+@tabs-tab-text-colour: #676767;
+@tabs-tab-element-height: 65px;
+@tabs-tab-border-color: #dddddd;
+@tabs-tab-border-color-selected: #707070;
+@tabs-tab-selected-text-color: #434343;
+//
+// Tiles
+// --------------------------------------------------
+
+@tile-border-color: #797979;
+@selected-tile-color: #F69C65;
+
+@tile-default-color:#333333;
+@tile-default-bg: #f6f6f6;
+@tile-default-border: #DDDDDD;
+@tile-light-border: #DADADA;
+
+@tile-simple-color:#333333;
+@tile-simple-bg: #dddddd;
+@tile-simple-alt-bg: #CDCDCD;
+@tile-simple-border: #BBBBBB;
+
+@tile-striped-variant-darken: 8%;
+@font-color-light: #FFFFFF;
+@font-color-dark: #000000;
+@tile-dotted-border : #4DB8E2;
+@tile-dotted-background:#F4FBFD;
+
+//
+// User Panel
+// --------------------------------------------------
+
+//@user-panel-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@user-panel-font: "OpenSans";
+@user-panel-icon-background: #244686;
+@user-panel-text-colour: #244686;
+
+//Applicant Facing
+
+@applicant-facing-carousel-background-colour: rgba(255,255,255,0.8);
+@applicant-facing-features-background-colour: rgba(0,0,0,0.75);
+@applicant-facing-room-numbers-dark-background:rgba(0,0,0,0.25);
+
+//Filters
+@filter-background-color: #314F8F;
+@view-change-height: 30px;

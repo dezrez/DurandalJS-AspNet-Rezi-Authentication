@@ -1,0 +1,41 @@
+﻿@import "../Custom/mixins.less";
+@import "../Custom/variables.less";
+
+form.form {
+    fieldset {
+        margin-top: 1em;
+
+        legend {
+            font-size: 1em;
+            border-bottom: none;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        span.label {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.typeahead-autocomplete.form-control {
+    .transition(none);
+}
+
+.input-button-group {
+    margin-top: 10px;
+
+    input {
+        height: 40px;
+        box-shadow: none;
+        color: @neutral-medium;
+
+        &:focus + .input-group-btn .btn-default {
+            border-color: @textinput-focus-border;
+        }
+    }
+
+    .input-group-btn:last-child > .btn {
+        height: 40px;
+    }
+}

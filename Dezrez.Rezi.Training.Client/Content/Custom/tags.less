@@ -1,0 +1,66 @@
+﻿@import "../Custom/variables.less";
+@import "../Custom/mixins.less";
+
+.tag {
+    .rounded-corners(@tag-border-radius);
+    display: inline-block;
+    max-width:100%;
+    padding: 2px 4px 2px 4px;
+    margin: 2px;
+    vertical-align: top;
+
+    i {
+        margin-top: 2px;
+        cursor: pointer;
+
+        :hover {
+            color: @invert-text-color-hover;
+        }
+    }
+
+    &.padding-m {
+        padding: 4px 8px 4px 8px;
+    }
+
+    &.dragging {
+        visibility: hidden;
+    }
+}
+
+.tag-primary {
+    background-color: @primary-colour;
+    .invert-text-colour;
+    .break-word;
+}
+
+.tag-neutral {
+    background-color: @neutral-light;
+}
+
+.tag-square {
+    width:38px;
+    height:38px;
+    background-color:@primary-colour;
+    margin:1px 10px;
+}
+
+
+
+.tag-suggestions{
+    max-width:300px;
+    overflow:hidden;
+    color: @text-color;
+    background-color: white;
+    position: absolute;
+    z-index: 100;
+    li{
+        .text-truncates;
+        padding: 10px;
+    }
+    border: 1px solid @tile-border-color;
+}
+
+
+.selected-tags{
+    margin-top: 10px;
+}

@@ -1,0 +1,69 @@
+﻿@import "variables.less";
+@import "mixins.less";
+
+#top-section-rightmost-tiles .modal-content{
+    /*Overrides*/
+
+    width: -moz-calc(100% - 18px);
+    width: -webkit-calc(100% - 18px);
+    width: -o-calc(100% - 18px);
+    width: calc(~'100% - 18px');
+    background-color: @neutral-background-color;
+    box-shadow: 2px 2px 5px @border-unselected;
+    display: block;
+    height: auto;
+    left: 0;
+    padding-bottom: 1.5em;
+    position: absolute;
+    z-index: 1001;
+    border-radius:0;
+    content : "Actions";
+
+    .actions  {
+        width:100%;
+         .tile-arrow-left, .info-tile-text{
+            display:none;
+        }
+
+        .info-tile-text {
+            margin-left:10px;
+        }
+    }
+
+    .modal-header{
+        height: 2.8em;
+        padding: 0 15px;
+        border:none;
+    }
+    .actions-menu-heading {
+        
+        left: 0;
+
+        h1.large-text{
+            font-size: large;
+        }
+    }
+
+    ul.actions{
+        li{
+            margin-top: 1.5em;
+            margin-left: 10px;
+            float:left;
+            span{
+                &.action{
+                    border: 3px solid @primary-colour;
+                    background-color: @action-color;
+                    padding: 20px;
+                }
+                &.action-text{
+                    margin-top: 14px;
+                    margin-left: 6px;
+                }
+                float: left;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

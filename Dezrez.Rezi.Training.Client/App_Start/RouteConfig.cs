@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+
+namespace Dezrez.Rezi.Training.Client
+{
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapRoute(
+                name: "DurandalView",
+                url: "Views/{*viewname}",
+                defaults: new {controller = "DurandalView", action = "GetTemplate"}
+            );
+
+            routes.MapRoute(
+                name: "PM",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+        }
+    }
+}

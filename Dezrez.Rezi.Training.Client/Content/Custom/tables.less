@@ -1,0 +1,168 @@
+﻿@import "../Custom/mixins.less";
+@import "../Custom/variables.less";
+
+table.table {
+
+    margin-bottom:0;
+    background-color: @table-background-color;
+    box-shadow: -0px -1px @table-border-color;
+    border-top:solid 1px @white;
+    margin-top:20px;
+
+    
+    >thead {
+
+        >tr {
+
+            .no-double-click-highlight;
+
+            &.selected {
+                >th {
+                    .table-row-selected(0,2px);
+                }
+            }
+            th {
+
+
+                border-bottom:solid 1px @white;
+                box-shadow: 0 2px @table-border-color;
+
+                &.xs {
+                    width: 5%;
+                }
+                &.sm{
+                    width: 10%
+                }
+                &.md{
+                    width: 15%
+                }
+                &.lg {
+                    width: 25%;
+                }
+                &.xl{
+                    width: 35%
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+
+                .no-double-click-highlight;
+                line-height: 2em;
+
+                &.middle {
+                    .middle;
+                }
+
+                &.text {
+                    line-height: 1.5em;
+                }
+
+                p {
+                    margin: 0 0 5px;
+                }
+            }
+
+            .table-data-highlight {
+                color: @table-data-highlight-color;
+            }
+
+            .table-data-heading {
+                font-size:16px;
+            }
+
+            &.selected {
+                td {
+                    .table-row-selected(1px,1px)
+                }
+            }
+        }
+        tr.hover-enabled{
+            &:hover{
+                background-color: @hover-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.paging-icon
+{
+    background-color:@neutral-light;
+    font-size:2em;
+    padding:5px 10px;
+    cursor: pointer;
+}
+
+.pagination-top 
+{
+    background-color:@neutral-v-light;
+    overflow:hidden;
+    padding:15px;
+    border-top:solid 1px @white;
+    box-shadow:0 -1px @very-light-grey, 0 1px @very-light-grey;
+    border-bottom:solid 1px @white;
+    margin-bottom:1px;
+
+    input[type='checkbox'] {
+        margin-top:1px;
+    }
+}
+
+.table > thead > tr.pagination-table-header {
+    background-color: @table-header-background-color;
+    border-bottom:none;
+
+    th {
+        font-weight: normal;
+        padding:20px 0;
+    }
+
+    th.text-center {
+        vertical-align:top;
+        padding-top:25px;
+    }
+
+    .btn {
+        border-radius:0;
+    }
+}
+
+.pagination-bottom {
+    border-top: solid 1px @neutral-light;
+    overflow: hidden;
+    height: 60px;
+}
+
+.pagination-label
+{
+    padding: 7px 2px;
+    display:inline-block;
+}
+
+.pagination-items-per-page-label
+{
+    padding:7px 7px 7px 21px;
+    display:inline-block;
+}
+
+.pagination-number
+{
+    display:inline-block;
+    padding:10px;
+    color:@info-colour;
+    font-size:1.1em;
+
+    &.selected
+    {
+        color:@text-color;
+        font-weight:bold;
+    }
+}
+
+ul.pagination-dropdown {
+    min-width: 50px;
+}

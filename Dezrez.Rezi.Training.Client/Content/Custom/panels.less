@@ -1,0 +1,236 @@
+﻿@import "../Custom/variables.less";
+@import "../Custom/images.less";
+@import "../Custom/mixins.less";
+@import "../Custom/shapes.less";
+
+@panel-width: 600px;
+@panel-width-slide: 300px;
+
+.side-panel {
+    height: 100%;
+    width: @panel-width;
+    .transparent-dark-back;
+    .invert-text-colour;
+    padding: 0 20px;
+    font-size: 16px;
+
+    .features-list {
+        font-style: italic;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    .info-box {
+        font-size: 36px;
+
+        h4 {
+            font-size: 16px;
+        }
+
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .row {
+        padding: 20px;
+    }
+
+    &.no-background {
+        background-color: @transparent-background;
+    }
+
+    top: @global-nav-height;
+    right: 0;
+    position: absolute;
+}
+
+&.no-top {
+    top: 0;
+}
+
+.slide-right {
+    right: -@panel-width-slide;
+}
+
+.anchor-right-with-panel-slide {
+    right: @panel-width-slide;
+}
+
+div.margin-right-with-panel-slide-s {
+    margin-right: (@panel-width-slide + 10px);
+}
+
+.item-description {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    font-size: 1.2em;
+    background-color: @light-grey;
+
+    &.floor {
+        background-color: darken(@light-grey, 3%);
+        padding:5px;
+    }
+
+    h3 {
+        margin-left: 0;
+        padding-top: 2px;
+    }
+
+    .item-description-room-description {
+        padding: 5px 5px 15px 0;
+    }
+
+    .item-description-floor-title {
+        text-transform: uppercase;
+    }
+
+    .item-description-header {
+        font-size: 1.2em;
+        padding-top: 10px;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .room-edit {
+        .fade-in-right (@seconds: 0.4s);
+        background-color: @lightest-blue;
+        border: dotted 1px @light-blue;
+        padding-top: 20px;
+
+        .room-edit-description {
+            margin-top:15px;
+        }
+
+        .room-description-input {
+            height:200px;
+        }
+
+        .room-edit-save-discard {
+            padding: 0 11px 11px 0;
+        }
+    }
+
+    .item-description-images {
+        padding-bottom: 15px;
+    }
+}
+
+.item-description-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.item-description-insert {
+    background-color: @primary-colour;
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 150px;
+
+    &:before {
+        content: " ";
+        height: 50px;
+        position: absolute;
+        width: 57px;
+        background-color: @primary-colour;
+        left: -41px;
+        z-index: 1;
+    }
+}
+
+.item-description-drop-target {
+    .drop-target();
+    margin: 7px 0;
+}
+
+.write-up-editor-container {
+    border: dashed 2px @neutral-light;
+}
+
+.organize-room-item {
+    height: 25px;
+}
+
+.item-editor-toolbar-header {
+    margin-top: 15px;
+
+    header {
+        margin: 0 0 5px 0;
+        border: solid 2px @neutral-light;
+        background-color: @neutral-v-light;
+
+        h4 {
+            margin: 0;
+            padding: 14px 5px;
+            display: inline-block;
+            float: left;
+        }
+
+        i {
+            font-size: 1.8em;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+
+        input.btn {
+            margin: 5px;
+        }
+    }
+}
+
+.panel-insert-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: @light-grey;
+    padding-bottom: 30px;
+}
+
+.panel-insert {
+    background-color: @primary-colour;
+    position: relative;
+    cursor: pointer;
+    .invert-text-colour();
+    font-size: 20px;
+
+    &.active {
+        background-color: @primary-colour;
+    }
+}
+
+.panel-highlight {
+    border: solid 1px @new-item-notification;
+}
+
+.room-editor-main-content {
+    height: 400px;
+
+    & .with-border {
+        border: solid 1px @neutral-light;
+    }
+}
+
+.room-editor-slidein-panel {
+    background-color: @modal-background-color;
+    border: solid 1px @neutral-light;
+    overflow: auto;
+}
+
+.room-editor-container {
+    background-color: @table-background-color;
+}
+
+
+.panel-v-scroll {
+    overflow-y: scroll;
+}

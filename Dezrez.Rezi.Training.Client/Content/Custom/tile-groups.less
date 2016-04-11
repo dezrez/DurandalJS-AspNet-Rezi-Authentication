@@ -1,0 +1,20 @@
+﻿@import "../Custom/mixins.less";
+@import "../Custom/variables.less";
+
+.tile-group-striped {
+    >.tile-default:nth-child(even) {
+        background-color: darken(@tile-default-bg, @tile-striped-variant-darken);
+    }
+
+    >.tile-simple:nth-child(even) {
+        background-color: darken(@tile-simple-bg, @tile-striped-variant-darken);
+    }
+
+    >.tile-primary:nth-child(even) {
+        background-color: darken(@primary-colour, @tile-striped-variant-darken);
+    }
+
+    >.tile-info:nth-child(even) {
+        background-color: darken(@info-colour, @tile-striped-variant-darken);
+    }
+}

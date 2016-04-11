@@ -1,0 +1,116 @@
+﻿@import "variables.less";
+@import "mixins.less";
+
+.fileupload-container
+{
+    clear:left;
+    margin:40px 0 30px 0;
+    height:auto;
+
+    .image-rect {
+        border:solid 2px @white;
+        .transition();
+        overflow:hidden;
+
+        .image-square-content {
+            .transition();
+            padding:5px;
+        }
+
+        &:hover {
+          
+            .image-square-content {
+                opacity:0.7;
+                .transition();
+            }
+
+            .transition();
+            border:dotted 2px @tile-dotted-border;
+        }
+    }
+
+    span.twitter-typeahead .tt-query{
+        border-radius:0 !important;
+    }
+}
+
+.fileupload-title {
+     margin-left:0;
+     margin-bottom:15px;
+}
+
+.fileupload-image-container
+{
+    margin:0 auto;
+    border:solid 1px @tabs-tab-text-colour;
+    height:210px;
+}
+
+.fileupload-tags-container
+{
+    margin:0;
+    padding:5px 5px 5px 0;
+    position:relative;
+    left:-12px;
+}
+
+.fileupload-image
+{
+
+    margin:10px;
+    height: 190px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.fileupload-instruction {
+    font-size:24px;
+    font-weight:lighter;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileinput-button input {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.drop-area
+{
+    border:dashed 3px @drop-area-border;
+    background-color:@drop-area-background;
+    padding:20px;
+    text-align:center;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+@media (max-width:@content-break-med) {
+    .fileupload-image-container {
+       height:160px;
+    }
+    .fileupload-image
+    {
+        height:140px;
+    }
+}
+
+@media (max-width:@content-break-min) {
+    .fileupload-image-container {
+        height:130px
+    }
+    .fileupload-image {
+        height:110px
+    }
+}

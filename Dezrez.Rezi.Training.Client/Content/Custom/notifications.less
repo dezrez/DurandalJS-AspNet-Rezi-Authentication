@@ -1,0 +1,214 @@
+﻿@import "../Custom/mixins.less";
+@import "../Custom/shapes.less";
+@import "../Custom/variables.less";
+
+.status {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+
+// HACK: these color values need to be vars
+.status-online {
+    background-color: @user-online-colour;
+}
+
+.status-offline {
+    background-color: @user-offline-colour;
+}
+
+.status-idle {
+    background-color: @user-idle-colour;
+}
+
+.status-group {
+    background-color: @user-group-color;
+}
+
+.notification-navbar {
+    position: relative;
+    width: 34px;
+    padding-top: 8px;
+    margin: 1px 10px 0 10px;
+    cursor: pointer;
+
+
+    .notification-count {
+        border-radius: 50%;
+        top: 4px;
+        right: 0;
+        width: 20px;
+        background-color: @primary-colour;
+    }
+
+    i {
+        color: @notification-color;
+    }
+
+    i:hover {
+        color: @text-colour-for-dark;
+    }
+}
+
+.notification {
+    position: relative;
+    margin: 1px 1px 1px 1px;
+    background-color: @primary-colour;
+    border-radius: 3px;
+    float: left;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+    .invert-text-colour;
+}
+
+.notification-info {
+    background-color: @info-colour;
+}
+
+.notification-count {
+    .circle(@secondary-colour, 10px);
+    .invert-text-colour;
+    background-color: @secondary-colour;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    .invert-text-colour;
+    display: inline-block;
+}
+
+.notification-popup-window {
+    position: absolute;
+    outline: none;
+    padding: 12px;
+    background-color: @active-tab-background;
+}
+
+.notification-popup {
+    width: 450px;
+    height: 700px;
+    margin-top: 20px;
+    left: -338px;
+    box-shadow: 0 0 10px 5px @darkgrey-colour;
+    border: 2px solid @neutral-dark;
+    .notification-popup-window;
+
+    .top {
+        display: block;
+        margin-top: -26px;
+        margin-left: 340px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.contact-card-content {
+    margin-top: 20px;
+    color: @neutral-medium;
+    font-weight: normal;
+    font-size: 15px;
+
+    div.row {
+        margin-top: 10px;
+    }
+
+    i.contact-icon {
+        color: @neutral-medium;
+        padding-top: 0;
+        font-size: 24px;
+    }
+
+    .top {
+        display: block;
+        margin-top: -26px;
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
+
+        .char-arrow-up2 {
+            color:@light-grey !important;
+            font-size:50px;
+            margin-top:-18px;
+        }
+
+        &.arrow-right {
+            float: right;
+            margin-right: 40px;
+        }
+
+        &.arrow-middle {
+            margin: -26px auto 0 auto;
+        }
+    }
+}
+
+.contact-card {
+    border: none;
+    box-shadow: 3px 3px 10px 0px @neutral-dark;
+    .notification-popup-window;
+    .contact-card-content;
+}
+
+.contact-card-small {
+    min-width: 550px;
+    min-height: 215px;
+    z-index:10;
+    .contact-card;
+
+    &.active {
+        &:after {
+            content:"TEST!";
+        }
+    }
+}
+
+i.char.loader {
+    color: @primary-colour;
+}
+
+.row.loader {
+    text-align:center;
+}
+
+.notification-icon {
+    color: @primary-colour;
+}
+
+.notification-icon-lg {
+    color: @primary-colour;
+    font-size: 1.8em;
+}
+
+.ui-draggable-dragging {
+    .hide-when-dragging {
+        display: none;
+    }
+}
+
+.offscreen-notification {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: @new-item-notification;
+    width: 110px;
+    height: 55px;
+    .rounded-corners(5px);
+
+    p {
+        padding: 10px 5px;
+        .invert-text-colour;
+        text-align: center;
+    }
+
+    .offscreen-notification-pointer {
+        background-color: transparent;
+        position: absolute;
+        margin-left: -7px;
+        left: 50%;
+        bottom: -14px;
+        text-align: center;
+        display: block;
+        .shape-triangle-down(14px, @new-item-notification)
+    }
+}

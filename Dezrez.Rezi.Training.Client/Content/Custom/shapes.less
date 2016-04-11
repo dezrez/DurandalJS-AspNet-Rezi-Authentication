@@ -1,0 +1,64 @@
+﻿@import "../Custom/variables.less";
+
+//
+// Shapes
+// -------------------
+
+.circle-fixed {
+	border-radius: 50%;
+}
+
+.arrow-left-fixed {
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 	
+	border-right: 10px solid black; 
+}
+
+.arrow-up-fixed {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;	
+	border-bottom: 10px solid black;
+}
+
+.arrow-down-fixed {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;	
+	border-top: 10px solid black;
+}
+
+.arrow-right-fixed {
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;	
+	border-left: 10px solid black;
+}
+
+.shape-triangle-right(@width, @color) {
+  width:@width;
+  height: @width;
+  border-top: @width/2 solid transparent;
+  border-left: @width solid @color;
+  border-bottom: @width/2 solid transparent;
+}
+
+.shape-triangle-down(@width, @color) {
+  width:@width;
+  height: @width;
+  border-left: @width/2 solid transparent;
+  border-right: @width/2 solid transparent;
+  border-top: @width solid @color;
+}
+
+.circle (@color: #000000, @radius: 10px) {
+    background-color: @color;
+    border-radius: 50%;
+	width: @radius * 2;
+	height: @radius * 2; 
+}

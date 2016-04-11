@@ -1,0 +1,45 @@
+﻿@import "../Custom/variables.less";
+
+.loading
+{
+    background-color:@loading-background;
+    position:fixed;
+    left:0px;
+    top:0px; 
+    right:0px;
+    bottom:0px;
+    text-align:center; 
+    color:@text-colour-for-light;
+    p {
+        font-size:20px;
+        padding:10px;
+    }
+    &.transparent {
+        opacity:0.25;
+    }
+    
+} 
+
+.loading-inline
+{
+    background-color: @global-bg;
+    width:100%;
+    height:100%;
+    text-align:center; 
+    color:@text-colour-for-light;
+    p {
+        font-size:20px;
+        padding:10px;
+    }
+    
+} 
+
+
+.spinner-large
+{
+    width:66px;
+    height:66px;
+    background-image: url(../images/loading-large.gif);
+    margin: 0 auto;
+    margin-top:300px;
+}

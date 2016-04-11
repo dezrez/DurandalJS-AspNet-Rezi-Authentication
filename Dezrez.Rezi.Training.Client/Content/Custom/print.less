@@ -1,0 +1,21 @@
+﻿@import "variables.less";
+@import "mixins.less";
+
+@media print {
+    #applicationHost{
+        display:none !important;
+    }
+
+    #printarea{
+        display:block;
+    }
+
+    .no-print{
+        display:none !important;
+    }
+
+    // specific no print rules for dynamically generated html
+    .dataTables_filter{
+        display:none !important;
+    } 
+}

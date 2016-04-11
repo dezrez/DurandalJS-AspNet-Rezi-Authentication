@@ -1,0 +1,27 @@
+﻿@import "variables.less";
+
+// Fixed widths
+// In some cases (Marketing Hub header) we require fixed widths
+// Generate width classes (width-1 to width-20);
+@iterations: 20;
+
+.span-loop (@i) when (@i > 0) {
+    @w: @i * @width-unit;
+    .width-@{i} {
+        width:~"@{w}";
+    }
+    .span-loop(@i - 1);
+}
+.span-loop (@iterations);
+
+// Percentage widths
+// In some cases we need to specify percentage widths
+@percentage-iterations: 33;
+.span-loop-percent (@i) when (@i > 0) {
+    @wp: @i * 3;
+    .width-percent-@{wp} {
+        width:~"@{wp}%";
+    }
+    .span-loop-percent(@i - 1);
+}
+.span-loop-percent(@percentage-iterations);

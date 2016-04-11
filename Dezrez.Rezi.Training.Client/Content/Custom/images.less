@@ -1,0 +1,276 @@
+﻿@import "../Custom/variables.less";
+@import "../Custom/mixins.less";
+
+.cover-background-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    .cover-image;
+}
+
+.thumbnail-wrapper {
+    float: left;
+    padding: 0 14px 14px 0;
+    line-height: 1.428571429;
+    background-color: #ffffff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.thumbnail-small {
+    width: 90px;
+    height: 65px;
+    padding: 5px;
+    float: left;
+    opacity: 1;
+
+    img {
+        width: 80px;
+        height: 55px;
+    }
+
+    cursor: pointer;
+}
+
+.thumbnail-medium {
+    width: 122px;
+    height: 85px;
+    padding: 5px;
+    float: left;
+    opacity: 1;
+
+    img {
+        width: 112px;
+        height: 75px;
+    }
+
+    cursor: pointer;
+}
+
+.thumbnail-small-square {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    float: left;
+    opacity: 1;
+    cursor: pointer;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.thumbnail-medium-square {
+    width: 110px;
+    height: 110px;
+    padding: 5px;
+    float: left;
+    opacity: 1;
+    cursor: pointer;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.thumbnail-large-square {
+    width: 234px;
+    height: 234px;
+    padding: 5px;
+    float: left;
+    opacity: 1;
+    cursor: pointer;
+
+    img {
+        width: 222px;
+        height: 222px;
+    }
+
+    margin-right: 14px;
+}
+
+.thumbnail-blank {
+    background-color: @very-light-grey;
+}
+
+.map-thumbnail {
+    width: 110px;
+    height: 95px;
+}
+
+.property-thumb {
+    .cover-image;
+    width: 110px;
+    height: 75px;
+}
+
+.property-thumb-container {
+    height: 234px;
+    overflow: hidden;
+    position: relative;
+    left: 3%;
+}
+
+.responsive-image {
+    .cover-image;
+}
+
+.medium-image {
+    width: 170px;
+    height: 113px;
+}
+
+.small-image {
+    width: 70px;
+    height: 46px;
+}
+
+
+.background-center() {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cover-image() {
+    background-size: cover;
+    .background-center;
+}
+
+.contain-image() {
+    background-size: contain;
+    .background-center;
+}
+
+.thumbnail-icon {
+    .transparent-dark-back;
+    .invert-text-colour;
+    position: absolute;
+    font-size: 30px;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    top: 0px;
+
+    &.small {
+        font-size: 1em;
+    }
+}
+
+.image-rect {
+    position: relative;
+    width: 100%;
+
+    &.selected {
+        border: solid 3px @primary-colour;
+    }
+}
+
+.image-rect:before {
+    content: "";
+    display: block;
+    padding-top: 60%; /* initial ratio of 1:1*/
+}
+
+.image-square {
+    position: relative;
+    width: 100%;
+
+    &.selected {
+        border: solid 3px @primary-colour;
+    }
+}
+
+.image-square:before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+.image-square-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+
+    &.ui-draggable-dragging {
+        z-index: 9999;
+    }
+
+    i {
+        font-size: 1.4em;
+    }
+}
+
+.gallery-image-add {
+    background-image: url(../images/large-plus-blue.png);
+}
+
+.gallery-image-drop-target {
+    .drop-target();
+}
+
+.image-gallery-empty {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    p {
+        margin-top: 40%;
+    }
+}
+
+.image-square-80 {
+    width: 80px;
+    height: 80px;
+}
+
+.item-description-image {
+    width: 50px;
+    height: 50px;
+}
+
+.image-square-content.ui-draggable-dragging {
+    width: 100px !important;
+    height: 100px !important;
+    opacity: 0.5;
+}
+
+.property-list-image-container {
+    padding: 10px;
+    float: left;
+
+    .property-list-image {
+        .transition(0.3s);
+        width: 113px;
+        height: 85px;
+        border: solid 1px @image-border;
+        padding: 5px;
+        margin-right:10px;
+
+        &:hover {
+            opacity:0.8;
+        }
+    }
+
+    .property-list-no-image {
+        width: 100px;
+        height: 70px;
+        padding: 10px 5px 5px;
+        background-color: @neutral-light;
+        text-align: center;
+
+        p {
+            line-height: 1em;
+            margin: 5px 0px;
+        }
+    }
+}

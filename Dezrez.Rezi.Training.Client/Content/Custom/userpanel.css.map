@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "userpanel.css",
+  "sources": [
+    "userpanel.less",
+    "variables.less"
+  ],
+  "names": [],
+  "mappings": "AAEA;EAEI,eAAA;EACA,kBAAA;EACA,MAAA;EACA,YAAA;;AAGJ,qBAAqB;EAEjB,YAAA;EACA,UAAA;EACA,cAAA;;AAGJ;EAEI,YAAA;EACA,2BAAA;EACA,aAAA;EACA,sBAAA;EACA,aCtBU,UDsBV;EACA,YAAA;EACA,cAAA;;AARJ,mBASI;EACI,SAAA;;AAIR;EAEI,YAAA;;AAGJ;EAEI,WAAA;EACA,kBAAA;;AAGJ;EAEI,gBAAA;;AAGJ,eAEI;EACI,cAAA;EACA,wBAAA;EACA,WAAA"
+}

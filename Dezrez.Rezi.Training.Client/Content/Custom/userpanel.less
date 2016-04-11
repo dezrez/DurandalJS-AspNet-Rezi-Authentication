@@ -1,0 +1,55 @@
+﻿@import "../Custom/variables.less";
+
+.user-panel-container
+{
+    position:fixed;
+    overflow-x:hidden;
+    top: 0;
+    height: 100%;
+}
+
+.user-panel-container.fixed-open
+{
+    width:400px;
+    right:0px;
+    display:block;
+}
+
+.user-panel-content
+{
+    width:400px;
+    border-left:4px solid #999;
+    padding:20px;
+    background-color:#333;
+    font-family: @global-font;
+    height: 100%;
+    color:#efefef;
+    .row {
+        margin:0;
+    }
+}
+
+.user-panel-close
+{
+    float:right;
+}
+
+.user-image-container
+{
+    float:left;
+    text-align:center;
+}
+
+.row-user-option
+{
+    padding:2px 0px;
+}
+
+.user-list-item
+{
+    span {
+        display:block;
+        padding: 2px 5px 0px 5px;
+        float:left;
+    }
+}

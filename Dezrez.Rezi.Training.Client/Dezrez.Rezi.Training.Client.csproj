@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{017559AA-E869-4C23-AE02-9C09BF2F3AD5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Dezrez.Rezi.Training.Client</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64302</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64302/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App\main.js" />
+    <Content Include="Content\Bootstrap\bootstrap.css" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Bootstrap\glyphicons.css" />
+    <Content Include="Content\Bootstrap\glyphicons.min.css" />
+    <Content Include="Content\Bootstrap\labels.css" />
+    <Content Include="Content\Bootstrap\labels.min.css" />
+    <Content Include="Content\Bootstrap\media.css" />
+    <Content Include="Content\Bootstrap\media.min.css" />
+    <Content Include="Content\Bootstrap\mixins.css" />
+    <Content Include="Content\Bootstrap\mixins.min.css" />
+    <Content Include="Content\Bootstrap\navbar.css" />
+    <Content Include="Content\Bootstrap\navbar.min.css" />
+    <Content Include="Content\Bootstrap\navs.css" />
+    <Content Include="Content\Bootstrap\navs.min.css" />
+    <Content Include="Content\Bootstrap\normalize.css" />
+    <Content Include="Content\Bootstrap\normalize.min.css" />
+    <Content Include="Content\Bootstrap\print.css" />
+    <Content Include="Content\Bootstrap\print.min.css" />
+    <Content Include="Content\Bootstrap\theme.css" />
+    <Content Include="Content\Bootstrap\theme.min.css" />
+    <Content Include="Content\Bootstrap\variables.css" />
+    <Content Include="Content\Bootstrap\variables.min.css" />
+    <Content Include="Content\Custom\actions.css" />
+    <Content Include="Content\Custom\actions.min.css" />
+    <Content Include="Content\Custom\buttons.css" />
+    <Content Include="Content\Custom\buttons.min.css" />
+    <Content Include="Content\Custom\calculations.css" />
+    <Content Include="Content\Custom\calculations.min.css" />
+    <Content Include="Content\Custom\carousel.css" />
+    <Content Include="Content\Custom\carousel.min.css" />
+    <Content Include="Content\Custom\dezrez-bootstrap.css" />
+    <Content Include="Content\Custom\dezrez-bootstrap.min.css" />
+    <Content Include="Content\Custom\dezrez-jquery-ui.css" />
+    <Content Include="Content\Custom\dezrez-jquery-ui.min.css" />
+    <Content Include="Content\Custom\dropdowns.css" />
+    <Content Include="Content\Custom\dropdowns.min.css" />
+    <Content Include="Content\Custom\fileupload.css" />
+    <Content Include="Content\Custom\fileupload.min.css" />
+    <Content Include="Content\Custom\filters.css" />
+    <Content Include="Content\Custom\filters.min.css" />
+    <Content Include="Content\Custom\fonts.css" />
+    <Content Include="Content\Custom\fonts.min.css" />
+    <Content Include="Content\Custom\forms.css" />
+    <Content Include="Content\Custom\forms.min.css" />
+    <Content Include="Content\Custom\global-nav.css" />
+    <Content Include="Content\Custom\global-nav.min.css" />
+    <Content Include="Content\Custom\images.css" />
+    <Content Include="Content\Custom\images.min.css" />
+    <Content Include="Content\Custom\jquery-ui.css" />
+    <Content Include="Content\Custom\loading.css" />
+    <Content Include="Content\Custom\loading.min.css" />
+    <Content Include="Content\Custom\mapping.css" />
+    <Content Include="Content\Custom\mapping.min.css" />
+    <Content Include="Content\Custom\menu-navigation.css" />
+    <Content Include="Content\Custom\menu-navigation.min.css" />
+    <Content Include="Content\Custom\mixins.css" />
+    <Content Include="Content\Custom\mixins.min.css" />
+    <Content Include="Content\Custom\modals.css" />
+    <Content Include="Content\Custom\modals.min.css" />
+    <Content Include="Content\Custom\navs.css" />
+    <Content Include="Content\Custom\navs.min.css" />
+    <Content Include="Content\Custom\notifications.css" />
+    <Content Include="Content\Custom\notifications.min.css" />
+    <Content Include="Content\Custom\panels.css" />
+    <Content Include="Content\Custom\panels.min.css" />
+    <Content Include="Content\Custom\print.css" />
+    <Content Include="Content\Custom\print.min.css" />
+    <Content Include="Content\Custom\ribbon.css" />
+    <Content Include="Content\Custom\ribbon.min.css" />
+    <Content Include="Content\Custom\shapes.css" />
+    <Content Include="Content\Custom\shapes.min.css" />
+    <Content Include="Content\Custom\tables.css" />
+    <Content Include="Content\Custom\tables.min.css" />
+    <Content Include="Content\Custom\tabs.css" />
+    <Content Include="Content\Custom\tabs.min.css" />
+    <Content Include="Content\Custom\tags.css" />
+    <Content Include="Content\Custom\tags.min.css" />
+    <Content Include="Content\Custom\text-editor.min.css" />
+    <Content Include="Content\Custom\text.css" />
+    <Content Include="Content\Custom\text.min.css" />
+    <Content Include="Content\Custom\tile-groups.css" />
+    <Content Include="Content\Custom\tile-groups.min.css" />
+    <Content Include="Content\Custom\tiles.css" />
+    <Content Include="Content\Custom\tiles.min.css" />
+    <Content Include="Content\Custom\userpanel.css" />
+    <Content Include="Content\Custom\userpanel.min.css" />
+    <Content Include="Content\Custom\variables.css" />
+    <Content Include="Content\Custom\variables.min.css" />
+    <Content Include="Content\durandal.css" />
+    <Content Include="Content\fonts\artill_clean_icons-webfont.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.css" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.html" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\png\criminal11.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\criminal20.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\criminal6.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\fingerprint48.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\gun9.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\hat6.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\left208.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\legal10.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\man198.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\pill.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\police22.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\police4.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\right208.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\spy2.png" />
+    <Content Include="Content\fonts\CrimeFontSet\png\unrecognizable1.png" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\criminal11.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\criminal20.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\criminal6.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\fingerprint48.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\gun9.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\hat6.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\left208.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\legal10.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\man198.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\pill.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\police22.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\police4.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\right208.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\spy2.svg" />
+    <Content Include="Content\fonts\CrimeFontSet\svg\unrecognizable1.svg" />
+    <Content Include="Content\images\arrow.png" />
+    <Content Include="Content\images\carousel-view.png" />
+    <Content Include="Content\images\client-bg-1.png" />
+    <Content Include="Content\images\content-tabs-down.png" />
+    <Content Include="Content\images\couple-male-female.png" />
+    <Content Include="Content\images\dataTables\back_disabled.png" />
+    <Content Include="Content\images\dataTables\back_enabled.png" />
+    <Content Include="Content\images\dataTables\back_enabled_hover.png" />
+    <Content Include="Content\images\dataTables\forward_disabled.png" />
+    <Content Include="Content\images\dataTables\forward_enabled.png" />
+    <Content Include="Content\images\dataTables\forward_enabled_hover.png" />
+    <Content Include="Content\images\dataTables\sort_asc.png" />
+    <Content Include="Content\images\dataTables\sort_asc_disabled.png" />
+    <Content Include="Content\images\dataTables\sort_both.png" />
+    <Content Include="Content\images\dataTables\sort_desc.png" />
+    <Content Include="Content\images\dataTables\sort_desc_disabled.png" />
+    <Content Include="Content\images\document-icon-dark.png" />
+    <Content Include="Content\images\down-arrow-red.png" />
+    <Content Include="Content\images\forSale.png" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\icons\appointments.png" />
+    <Content Include="Content\images\icons\circle-bg-light.png" />
+    <Content Include="Content\images\icons\circle-bg.png" />
+    <Content Include="Content\images\icons\document.png" />
+    <Content Include="Content\images\icons\img.png" />
+    <Content Include="Content\images\icons\offers.png" />
+    <Content Include="Content\images\icons\pencil-edit.png" />
+    <Content Include="Content\images\icons\tick-green.png" />
+    <Content Include="Content\images\icons\tick.png" />
+    <Content Include="Content\images\icons\viewings.png" />
+    <Content Include="Content\images\icons\VTs.png" />
+    <Content Include="Content\images\insert-indicator.png" />
+    <Content Include="Content\images\insert-point-active.png" />
+    <Content Include="Content\images\insert-point.png" />
+    <Content Include="Content\images\ios-startup-image-landscape.png" />
+    <Content Include="Content\images\ios-startup-image-portrait.png" />
+    <Content Include="Content\images\large-plus-blue.png" />
+    <Content Include="Content\images\list-view.png" />
+    <Content Include="Content\images\loading-large.gif" />
+    <Content Include="Content\images\mapping\mainPropLocationPin.png" />
+    <Content Include="Content\images\mapping\mainPropLocationPinSmall.gif" />
+    <Content Include="Content\images\mapping\mainPropLocationPinSmall.png" />
+    <Content Include="Content\images\mapping\poiMarker.png" />
+    <Content Include="Content\images\mapping\streetviewIcon.png" />
+    <Content Include="Content\images\mapping\viewPin.png" />
+    <Content Include="Content\images\nopropertyimage.png" />
+    <Content Include="Content\images\PM-20px-colour.png" />
+    <Content Include="Content\images\PM-20px-white.png" />
+    <Content Include="Content\images\rezi-20px-colour.png" />
+    <Content Include="Content\images\rezi-20px-white.png" />
+    <Content Include="Content\images\rezi-icon-100.png" />
+    <Content Include="Content\images\search-icon-light.png" />
+    <Content Include="Content\images\small-plus-blue.png" />
+    <Content Include="Content\images\speech.png" />
+    <Content Include="Content\images\test-house-thumb-strip.png" />
+    <Content Include="Content\images\test-house3.png" />
+    <Content Include="Content\images\test-user-image.png" />
+    <Content Include="Content\images\tile-view.png" />
+    <Content Include="Content\images\timeline-vertical-line.png" />
+    <Content Include="Content\images\toLet.png" />
+    <Content Include="Content\images\u534.jpg" />
+    <Content Include="Content\plugins\bootstrap-timepicker.css" />
+    <Content Include="Content\plugins\bootstrap-timepicker.min.css" />
+    <Content Include="Content\plugins\dataTables.colReorder.css" />
+    <Content Include="Content\plugins\dataTables.colReorder.min.css" />
+    <Content Include="Content\plugins\dataTables.fixedHeader.css" />
+    <Content Include="Content\plugins\dataTables.fixedHeader.min.css" />
+    <Content Include="Content\plugins\fullcalendar.css" />
+    <Content Include="Content\plugins\fullcalendar.min.css" />
+    <Content Include="Content\plugins\jquery.dataTables.css" />
+    <Content Include="Content\plugins\jquery.dataTables.min.css" />
+    <Content Include="Content\plugins\plugins.css" />
+    <Content Include="Content\plugins\plugins.min.css" />
+    <Content Include="Content\plugins\simpleWeather.css" />
+    <Content Include="Content\plugins\simpleWeather.min.css" />
+    <Content Include="Content\plugins\typeahead.js-bootstrap.css" />
+    <Content Include="Content\plugins\typeahead.js-bootstrap.min.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\accounting.js" />
+    <Content Include="Scripts\almond-custom.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\durandal-overrides\Overrides.js" />
+    <Content Include="Scripts\durandal\activator.js" />
+    <Content Include="Scripts\durandal\app.js" />
+    <Content Include="Scripts\durandal\binder.js" />
+    <Content Include="Scripts\durandal\composition.js" />
+    <Content Include="Scripts\durandal\events.js" />
+    <Content Include="Scripts\durandal\plugins\dialog.js" />
+    <Content Include="Scripts\durandal\plugins\history.js" />
+    <Content Include="Scripts\durandal\plugins\http.js" />
+    <Content Include="Scripts\durandal\plugins\observable.js" />
+    <Content Include="Scripts\durandal\plugins\router.js" />
+    <Content Include="Scripts\durandal\plugins\serializer.js" />
+    <Content Include="Scripts\durandal\plugins\widget.js" />
+    <Content Include="Scripts\durandal\system.js" />
+    <Content Include="Scripts\durandal\transitions\entrance.js" />
+    <Content Include="Scripts\durandal\viewEngine.js" />
+    <Content Include="Scripts\durandal\viewLocator.js" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.simpleWeather.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
+    <Content Include="Scripts\knockout-customHandlers\knockout-customHandlers.js" />
+    <Content Include="Scripts\linq.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\q.js" />
+    <Content Include="Scripts\q.min.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\text.js" />
+    <None Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Config\ClientConfigurationState.cs" />
+    <Compile Include="Config\ClientConfigurationStateCollection.cs" />
+    <Compile Include="Config\ConfigSection.cs" />
+    <Compile Include="Controllers\DurandalViewController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Converters\ConfigSectionConverter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConfigModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Content\Bootstrap\alerts.less" />
+    <Content Include="Content\Bootstrap\badges.less" />
+    <Content Include="Content\Bootstrap\bootstrap.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.less" />
+    <Content Include="Content\Bootstrap\breadcrumbs.less" />
+    <Content Include="Content\Bootstrap\button-groups.less" />
+    <Content Include="Content\Bootstrap\buttons.less" />
+    <Content Include="Content\Bootstrap\carousel.less" />
+    <Content Include="Content\Bootstrap\close.less" />
+    <Content Include="Content\Bootstrap\code.less" />
+    <Content Include="Content\Bootstrap\component-animations.less" />
+    <Content Include="Content\Bootstrap\dropdowns.less" />
+    <Content Include="Content\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Bootstrap\forms.less" />
+    <Content Include="Content\Bootstrap\glyphicons.less" />
+    <Content Include="Content\Bootstrap\grid.less" />
+    <Content Include="Content\Bootstrap\input-groups.less" />
+    <Content Include="Content\Bootstrap\jumbotron.less" />
+    <Content Include="Content\Bootstrap\labels.less" />
+    <Content Include="Content\Bootstrap\list-group.less" />
+    <Content Include="Content\Bootstrap\media.css.map" />
+    <Content Include="Content\Bootstrap\media.less" />
+    <Content Include="Content\Bootstrap\mixins.less" />
+    <Content Include="Content\Bootstrap\modals.less" />
+    <Content Include="Content\Bootstrap\navbar.less" />
+    <Content Include="Content\Bootstrap\navs.less" />
+    <Content Include="Content\Bootstrap\normalize.css.map" />
+    <Content Include="Content\Bootstrap\normalize.less" />
+    <Content Include="Content\Bootstrap\pager.less" />
+    <Content Include="Content\Bootstrap\pagination.less" />
+    <Content Include="Content\Bootstrap\panels.less" />
+    <Content Include="Content\Bootstrap\popovers.less" />
+    <Content Include="Content\Bootstrap\print.css.map" />
+    <Content Include="Content\Bootstrap\print.less" />
+    <Content Include="Content\Bootstrap\progress-bars.less" />
+    <Content Include="Content\Bootstrap\responsive-utilities.less" />
+    <Content Include="Content\Bootstrap\scaffolding.less" />
+    <Content Include="Content\Bootstrap\tables.less" />
+    <Content Include="Content\Bootstrap\theme.css.map" />
+    <Content Include="Content\Bootstrap\theme.less" />
+    <Content Include="Content\Bootstrap\thumbnails.less" />
+    <Content Include="Content\Bootstrap\tooltip.less" />
+    <Content Include="Content\Bootstrap\type.less" />
+    <Content Include="Content\Bootstrap\utilities.less" />
+    <Content Include="Content\Bootstrap\variables.less" />
+    <Content Include="Content\Bootstrap\wells.less" />
+    <Content Include="Content\Custom\actions.css.map" />
+    <Content Include="Content\Custom\actions.less" />
+    <Content Include="Content\Custom\buttons.css.map" />
+    <Content Include="Content\Custom\buttons.less" />
+    <Content Include="Content\Custom\calculations.css.map" />
+    <Content Include="Content\Custom\calculations.less" />
+    <Content Include="Content\Custom\carousel.css.map" />
+    <Content Include="Content\Custom\carousel.less" />
+    <Content Include="Content\Custom\dezrez-bootstrap.css.map" />
+    <Content Include="Content\Custom\dezrez-bootstrap.less" />
+    <Content Include="Content\Custom\dezrez-jquery-ui.css.map" />
+    <Content Include="Content\Custom\dezrez-jquery-ui.less" />
+    <Content Include="Content\Custom\dropdowns.css.map" />
+    <Content Include="Content\Custom\dropdowns.less" />
+    <Content Include="Content\Custom\fileupload.css.map" />
+    <Content Include="Content\Custom\fileupload.less" />
+    <Content Include="Content\Custom\filters.css.map" />
+    <Content Include="Content\Custom\filters.less" />
+    <Content Include="Content\Custom\fonts.css.map" />
+    <Content Include="Content\Custom\fonts.less" />
+    <Content Include="Content\Custom\forms.css.map" />
+    <Content Include="Content\Custom\forms.less" />
+    <Content Include="Content\Custom\global-nav.css.map" />
+    <Content Include="Content\Custom\global-nav.less" />
+    <Content Include="Content\Custom\images.css.map" />
+    <Content Include="Content\Custom\images.less" />
+    <Content Include="Content\Custom\loading.css.map" />
+    <Content Include="Content\Custom\loading.less" />
+    <Content Include="Content\Custom\mapping.css.map" />
+    <Content Include="Content\Custom\mapping.less" />
+    <Content Include="Content\Custom\menu-navigation.css.map" />
+    <Content Include="Content\Custom\menu-navigation.less" />
+    <Content Include="Content\Custom\mixins.css.map" />
+    <Content Include="Content\Custom\mixins.less" />
+    <Content Include="Content\Custom\modals.css.map" />
+    <Content Include="Content\Custom\modals.less" />
+    <Content Include="Content\Custom\navs.css.map" />
+    <Content Include="Content\Custom\navs.less" />
+    <Content Include="Content\Custom\notifications.css.map" />
+    <Content Include="Content\Custom\notifications.less" />
+    <Content Include="Content\Custom\panels.css.map" />
+    <Content Include="Content\Custom\panels.less" />
+    <Content Include="Content\Custom\print.css.map" />
+    <Content Include="Content\Custom\print.less" />
+    <Content Include="Content\Custom\ribbon.css.map" />
+    <Content Include="Content\Custom\ribbon.less" />
+    <Content Include="Content\Custom\shapes.css.map" />
+    <Content Include="Content\Custom\shapes.less" />
+    <Content Include="Content\Custom\tables.css.map" />
+    <Content Include="Content\Custom\tables.less" />
+    <Content Include="Content\Custom\tabs.css.map" />
+    <Content Include="Content\Custom\tabs.less" />
+    <Content Include="Content\Custom\tags.css.map" />
+    <Content Include="Content\Custom\tags.less" />
+    <Content Include="Content\Custom\text.css.map" />
+    <Content Include="Content\Custom\text.less" />
+    <Content Include="Content\Custom\tile-groups.css.map" />
+    <Content Include="Content\Custom\tile-groups.less" />
+    <Content Include="Content\Custom\tiles.css.map" />
+    <Content Include="Content\Custom\tiles.less" />
+    <Content Include="Content\Custom\userpanel.css.map" />
+    <Content Include="Content\Custom\userpanel.less" />
+    <Content Include="Content\Custom\variables.css.map" />
+    <Content Include="Content\Custom\variables.less" />
+    <Content Include="Content\fonts\artill_clean_icons-webfont.eot" />
+    <Content Include="Content\fonts\artill_clean_icons-webfont.ttf" />
+    <Content Include="Content\fonts\artill_clean_icons-webfont.woff" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\criminal11.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\criminal20.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\criminal6.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\fingerprint48.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\gun9.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\hat6.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\left208.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\legal10.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\man198.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\pill.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\police22.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\police4.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\right208.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\spy2.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\eps\unrecognizable1.eps" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.eot" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.ttf" />
+    <Content Include="Content\fonts\CrimeFontSet\flaticon.woff" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\criminal11.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\criminal20.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\criminal6.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\fingerprint48.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\gun9.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\hat6.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\left208.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\legal10.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\man198.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\pill.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\police22.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\police4.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\right208.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\spy2.psd" />
+    <Content Include="Content\fonts\CrimeFontSet\psd\unrecognizable1.psd" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Bold.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Bold.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-BoldItalic.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-BoldItalic.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-ExtraBold.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-ExtraBold.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-ExtraBoldItalic.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Italic.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Italic.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Light.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Light.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-LightItalic.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-LightItalic.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Regular.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Regular.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Semibold.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-Semibold.ttf" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-SemiboldItalic.eot" />
+    <Content Include="Content\fonts\OpenSans\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="Content\fonts\Rezi\icomoon.eot" />
+    <Content Include="Content\fonts\Rezi\icomoon.ttf" />
+    <Content Include="Content\plugins\bootstrap-timepicker.less" />
+    <Content Include="Content\plugins\dataTables.colReorder.less" />
+    <Content Include="Content\plugins\dataTables.fixedHeader.less" />
+    <Content Include="Content\plugins\fullcalendar.less" />
+    <Content Include="Content\plugins\jquery.dataTables.less" />
+    <Content Include="Content\plugins\plugins.less" />
+    <Content Include="Content\plugins\simpleWeather.less" />
+    <Content Include="Content\plugins\typeahead.js-bootstrap.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\durandal-overrides\Overrides.js.map" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Scripts\knockout-customHandlers\knockout-customHandlers.js.map" />
+    <Content Include="Views\GlobalNavigation.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Lists\PeopleList.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shell.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Lists\PropertyList.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="App\config\config.ts" />
+    <TypeScriptCompile Include="App\helpers\authenticationHelper.ts" />
+    <TypeScriptCompile Include="App\helpers\projectSetupHelper.ts" />
+    <TypeScriptCompile Include="App\helpers\requestHelper.ts" />
+    <TypeScriptCompile Include="App\helpers\routerHelper.ts" />
+    <TypeScriptCompile Include="App\interfaces\IWidget.ts" />
+    <TypeScriptCompile Include="App\services\authenticationService.ts" />
+    <TypeScriptCompile Include="App\services\helperService.ts" />
+    <TypeScriptCompile Include="App\services\routingService.ts" />
+    <TypeScriptCompile Include="App\viewmodels\GlobalNavigation.ts" />
+    <TypeScriptCompile Include="App\viewmodels\Home\Dashboard.ts" />
+    <TypeScriptCompile Include="App\viewmodels\Lists\PeopleList.ts" />
+    <TypeScriptCompile Include="App\viewmodels\Lists\PropertyList.ts" />
+    <TypeScriptCompile Include="App\viewmodels\Shell.ts" />
+    <TypeScriptCompile Include="Scripts\durandal-overrides\Overrides.ts" />
+    <TypeScriptCompile Include="Scripts\knockout-customHandlers\knockout-customHandlers.ts" />
+    <TypeScriptCompile Include="Scripts\typings\accounting\accounting.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\durandal\durandal.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\googlemaps\google.maps.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\isotope\isotope.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.dataTables\jquery.dataTables.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.simpleWeather\jquery.simpleWeather.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout\knockout-customHandlers.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\linq.js\linq.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\q\Q.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\q\requirejs\require.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\models\" />
+    <Folder Include="App\widgets\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Widgets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

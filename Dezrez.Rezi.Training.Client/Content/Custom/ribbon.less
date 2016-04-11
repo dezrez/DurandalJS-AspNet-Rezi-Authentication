@@ -1,0 +1,114 @@
+﻿@import "../Custom/variables.less";
+@import "../Custom/images.less";
+@import "../Custom/mixins.less";
+
+.ribbon {
+    width:100%;
+    position:relative;
+}
+
+.ribbon-content {
+    width: 100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.ribbon-content-container {
+    list-style:none;
+    display:inline-block;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+    white-space:nowrap;
+    min-width:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+
+    li {
+        float:left;
+        position:relative;
+    }
+}
+
+.ribbon-thumbnail
+{ 
+    position:relative;
+    width:174px;
+    height:64px;
+    margin:4px;
+    float:left; 
+    opacity:1;
+    > div {
+        width: 170px; 
+        height: 60px;
+        .cover-image;
+    }
+    cursor: pointer;
+    border:solid 2px;
+}
+
+.ribbon-icon {
+    .invert-text-colour;
+    font-size:46px;
+    height: @global-nav-height;
+    padding:5px 10px 10px 10px;
+    cursor: pointer;
+}
+.scrollbar-container
+{
+    height:20px;
+    background-color:@neutral-medium;
+    position:relative;
+}
+
+.scrollbar
+{
+    background-color:@neutral-light;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:16px;
+    margin:2px 0px;
+    .rounded-corners(3px);
+}
+
+.hub-ribbon
+{
+    background-color: @global-bg;
+    position:relative;
+    .ribbon-content
+    {
+        height: 125px;
+    }
+}
+
+.ribbon-lightproperty-item
+{
+    width:180px;
+    height:125px; 
+    p {
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+
+    &.selected {
+        background-color:@active-tab-background;
+
+        .ribbon-thumbnail {
+            border:solid 2px @primary-colour;
+        }
+    }
+}
+
+.ribbon-thumbnail-text
+{
+    margin-top:70px;
+    p {
+        text-align:center;
+        padding:3px;
+        margin:0px;
+    }
+}
+

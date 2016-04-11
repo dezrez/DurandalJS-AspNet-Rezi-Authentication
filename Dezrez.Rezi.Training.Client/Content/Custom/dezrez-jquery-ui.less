@@ -1,0 +1,45 @@
+﻿@import "../Custom/mixins.less";
+@import "../Custom/variables.less";
+
+.ui-accordion-header
+{
+    margin:0px 0px 0px 0px;
+    border:solid 2px @neutral-light;    
+    background-color:@neutral-v-light;
+    padding:10px 5px;
+    cursor:pointer;
+    h4 {
+        margin:0px;
+    
+    }
+}
+
+
+.ui-icon-triangle-1-s, .ui-icon-triangle-1-e {
+  color:@primary-colour;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  font-size:1.2em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ui-icon-triangle-1-s:before { content: "\e159"; } // Glyphicon collapse down
+.ui-icon-triangle-1-e:before { content: "\e160"; } // Glyphicon collapse up
+
+.ui-spinner-button {
+    .ui-icon-triangle-1-s:before { content: none; } // Override for spinner
+    .ui-icon-triangle-1-e:before { content: none; } // Override for spinner
+    .ui-icon-triangle-1-s, .ui-icon-triangle-1-e {
+      color: @font-color-dark;
+    }
+}
+
+.ui-accordion .ui-accordion-content {
+    overflow: visible;
+}
