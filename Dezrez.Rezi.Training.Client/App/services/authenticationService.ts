@@ -53,7 +53,7 @@ export class AuthenticationService  {
     public RefreshAuthToken() {
         var refreshToken = JSON.parse(localStorage.getItem('authorizationData')).refreshToken;
         var refreshConfig: any = { grant_type: "refresh_token", refresh_token: refreshToken };
-        var authHeader: any = { "Authorization": authHelper.AuthenticationHelper.GetBaseAuthentication("Rezi SPA", "cheesebiscuits") };
+        var authHeader: any = { "Authorization": authHelper.AuthenticationHelper.GetBaseAuthentication(config.Config.ClientId, config.Config.ClientPassword) };
 
         $.ajax({
             type: "POST",
